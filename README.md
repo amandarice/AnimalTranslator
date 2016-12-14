@@ -23,7 +23,8 @@ Upload the compressed zip to Lambda.
 
 ### Testing
 
-JSON response - https://developer.amazon.com/edw/home.html
-Vocal call and responses - https://echosim.io/
+Text/JSON calls and responses - https://developer.amazon.com/edw/home.html
+
+Vocal calls and responses - https://echosim.io/
 
 **Written by Amanda Rice**
