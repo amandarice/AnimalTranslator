@@ -1,7 +1,5 @@
 from ask import alexa
-from random import randint
 import urllib2
-import json
 
 def lambda_handler(request_obj, context={}):
     return alexa.route_request(request_obj)
@@ -12,7 +10,7 @@ def default_handler(request):
 
 @alexa.request_handler("LaunchRequest")
 def launch_request_handler(request):
-    return alexa.create_response(message="Welcome to Animal Translator! Give me the name of an animal, and I will give you the human method for representing the sound it makes!",
+    return alexa.create_response(message="Welcome to Animal Translator! Give me the name of an animal, and I will give you the human method for representing the sound it makes! What animal would you like me to sound out for you?",
                                  reprompt_message='Learning how to say the sounds of animals can be fun! What animal would you like me to sound out for you?')
 
 @alexa.request_handler(request_type="SessionEndedRequest")
@@ -26,10 +24,12 @@ def get_animal_sound_handler(request):
     sound = {}
     with open("animal_sounds.txt") as f:
         for line in f:
-            (key, val) = line.split()
-            sound[int(key)] = val
+            newline = line.strip()
+            key = newline[:newline.find(' ')]
+            val = newline[newline.find(' ')+1:]
+            sound[key]=val
 
-    animalSoundResponse = "The " + name + "makes the " + sound[name] + "sound";
+    animalSoundResponse = sound[name]
 
     return alexa.create_response(message=animalSoundResponse, end_session=True)
 
