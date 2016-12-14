@@ -18,6 +18,7 @@ Right click all of the following, then compress:
 * ask folder
 * lambda_function.py
 * animal_sounds.txt
+
 Upload the compressed zip to Lambda.
 
 #Testing
