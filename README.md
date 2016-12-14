@@ -1,7 +1,7 @@
 # AnimalTranslator
 Alexa skill that translates animal names to human sounds
 
-# Project Format
+### Project Format
 
 The speech_assets folder contains the files which comprise the Voice User Interface:
 * intent schema in intent_schema.json
@@ -12,7 +12,7 @@ The ask folder is based on the ask-alexa-pykit and is used to help develop an Al
 
 The lambda function in lambda_function.py is used to run the Alexa skill using AWS Lambda.
 
-#To Upload to Lambda
+### To Upload to Lambda
 
 Right click all of the following, then compress:
 * ask folder
@@ -21,9 +21,9 @@ Right click all of the following, then compress:
 
 Upload the compressed zip to Lambda.
 
-#Testing
+### Testing
 
 JSON response - https://developer.amazon.com/edw/home.html
 Vocal call and responses - https://echosim.io/
 
-#Written by Amanda Rice
+**Written by Amanda Rice**
