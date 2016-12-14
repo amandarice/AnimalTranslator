@@ -17,6 +17,7 @@ The lambda function in lambda_function.py is used to run the Alexa skill using A
 Right click all of the following, then compress:
 * ask folder
 * lambda_function.py
+* animal_sounds.txt
 Upload the compressed zip to Lambda.
 
 #Testing

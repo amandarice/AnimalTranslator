@@ -23,25 +23,15 @@ def session_ended_request_handler(request):
 def get_animal_sound_handler(request):
 
     name = request.get_slot_value("AnimalName")
-    address_endpoint = "https://maps.googleapis.com/maps/api/geocode/json?address=" + str(zipcode) + "&key=AIzaSyBGIfYI-cPjjpk3DfA71AgKvPfbeq_op78"
-    address = json.load(urllib2.urlopen(address_endpoint))
-    lat = address["results"][0]["geometry"]["location"]['lat']
-    lng = address["results"][0]["geometry"]["location"]['lng']
+    sound = {}
+    with open("animal_sounds.txt") as f:
+        for line in f:
+            (key, val) = line.split()
+            sound[int(key)] = val
 
-    brew_endpoint = "http://api.brewerydb.com/v2/search/geo/point?lat=" + str(lat) + "&lng=" + str(lng) + "&key=2d982c1274cf775318b70f4bb8cca4ff"
-    brew_locations = json.load(urllib2.urlopen(brew_endpoint))
+    animalSoundResponse = "The " + name + "makes the " + sound[name] + "sound";
 
-    brews = []
-    breweries = ""
-
-    for i in range(0,5):
-        if brew_locations["data"][i]["brewery"]["name"] not in brews:
-            brews.append(brew_locations["data"][i]["brewery"]["name"])
-            breweries = breweries + brew_locations["data"][i]["brewery"]["name"] + ", "
-
-    brewMessage = "Breweries in your area include " + breweries[:-2]
-
-    return alexa.create_response(message=brewMessage, end_session=True)
+    return alexa.create_response(message=animalSoundResponse, end_session=True)
 
 @alexa.intent_handler("AMAZON.HelpIntent")
 def help_intent_handler(request):
