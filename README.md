@@ -1,5 +1,13 @@
 # AnimalTranslator
-Alexa skill that translates animal names to human sounds
+
+AnimalTranslator is an Alexa skill that provides the human pronunciation for the sound of an animal you name.
+
+Sample Interaction:
+
+* Your Question: "Alexa, ask Animal Translator what does the cow say?"
+* Alexa's Response: "The cow says moo."
+
+This skill is primarily intended for young children learning how to identify different animals. You must use the singular form of the animal's name (e.g. use "dog" instead of "dogs") and can only use one-worded names. There are currently 23 animal names available.
 
 ### Project Format
 
