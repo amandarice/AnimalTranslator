@@ -1,0 +1,24 @@
+GetAnimalSound  {AnimalName}
+GetAnimalSound  a {AnimalName}
+GetAnimalSound  what does the {AnimalName} say
+GetAnimalSound  what does the {AnimalName} say please
+GetAnimalSound  what sounds does the {AnimalName} say
+GetAnimalSound  what sounds does the {AnimalName} say please
+GetAnimalSound  what noise does the {AnimalName} say
+GetAnimalSound  what noise does the {AnimalName} say please
+GetAnimalSound  what is the sound of a {AnimalName}
+GetAnimalSound  what's the sound of a {AnimalName}
+GetAnimalSound  what is the noise of a {AnimalName}
+GetAnimalSound  what's the noise of a {AnimalName}
+GetAnimalSound  give me the sound of a {AnimalName}
+GetAnimalSound  give me the sound for a {AnimalName}
+GetAnimalSound  give me the noise of a {AnimalName}
+GetAnimalSound  give me the noise for a {AnimalName}
+GetAnimalSound  tell me the sound of a {AnimalName}
+GetAnimalSound  tell me the sound for a {AnimalName}
+GetAnimalSound  tell me the noise of a {AnimalName}
+GetAnimalSound  tell me the noise for a {AnimalName}
+GetAnimalSound  the sound of a {AnimalName}
+GetAnimalSound  the sound for a {AnimalName}
+GetAnimalSound  the noise of a {AnimalName}
+GetAnimalSound  the noise for a {AnimalName}
